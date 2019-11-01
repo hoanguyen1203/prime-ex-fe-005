@@ -2,7 +2,7 @@
 - Using Resource GRIDSTACK.JS in order to build project.
 
 - Submitted by: Hoa Nguyen
-- Time spent: 20 Hours
+- Time spent: 7 Hours
 
 ## Usage
 ### Step 1 : Install and Update script using wget
