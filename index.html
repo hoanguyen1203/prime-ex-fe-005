@@ -26,43 +26,17 @@
 <body>
     <div id="app">
 
-        <header>
-            <h1>{{ headerTitle }}</h1>
-        </header>
+        <header-component></header-component>
 
         <div class="content">
             <div class="content__inner">
-                <div>
-                    <a href="#" id="add-widget" class="button"
-                        @click="addNewWidget('.grid-stack')">{{ addWidgetText }}</a>
-                    <a href="#" id="add-list-widget" class="button"
-                        @click="addListWidget('.grid-stack', [
-                        {x: 0, y: 0, width: 4, height: 2},
-                        {x: 4, y: 0, width: 4, height: 4},
-                        {x: 8, y: 0, width: 2, height: 2},
-                        {x: 10, y: 0, width: 2, height: 2},
-                        {x: 0, y: 2, width: 2, height: 2},
-                        {x: 2, y: 2, width: 2, height: 4},
-                        {x: 8, y: 2, width: 4, height: 2},
-                        {x: 0, y: 4, width: 2, height: 2},
-                        {x: 4, y: 4, width: 4, height: 2},
-                        {x: 8, y: 4, width: 2, height: 2},
-                        {x: 10, y: 4, width: 2, height: 2},
-                        {x: 0, y: 6, width: 12, height: 2}
-                    ])">{{ addListWidgetsText }}</a>
-                </div>
 
-                <div class="grid-stack">
-                </div>
+                <group-buttons element=".grid-stack" group="1"></group-buttons>
+                <div class="grid-stack"></div>
 
-                <div>
-                    <a href="#" id="add-widget" class="button" @click="addNewWidget('.gridBox')">{{ addWidgetText }}</a>
-                    <a href="#" id="add-list-widget" class="button"
-                        @click="addListWidget('.gridBox')">{{ addListWidgetsText }}</a>
-                </div>
+                <group-buttons element=".gridBox" group="2"></group-buttons>
+                <div class="gridBox"></div>
 
-                <div class="gridBox">
-                </div>
             </div>
         </div>
 
