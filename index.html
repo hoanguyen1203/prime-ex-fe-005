@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GridBox</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/gridstack.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.0/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js"></script>
+    <script src="dist/gridstack.js"></script>
+    <script src="dist/gridstack.jQueryUI.js"></script>
+
+    <script src="src/script.js" async></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <header>
+            <h1>{{ headerTitle }}</h1>
+        </header>
+
+        <div class="content">
+            <div class="content__inner">
+                <div>
+                    <a href="#" id="add-widget" class="button"
+                        @click="addNewWidget('.grid-stack')">{{ addWidgetText }}</a>
+                    <a href="#" id="add-list-widget" class="button"
+                        @click="addListWidget('.grid-stack', [
+                        {x: 0, y: 0, width: 4, height: 2},
+                        {x: 4, y: 0, width: 4, height: 4},
+                        {x: 8, y: 0, width: 2, height: 2},
+                        {x: 10, y: 0, width: 2, height: 2},
+                        {x: 0, y: 2, width: 2, height: 2},
+                        {x: 2, y: 2, width: 2, height: 4},
+                        {x: 8, y: 2, width: 4, height: 2},
+                        {x: 0, y: 4, width: 2, height: 2},
+                        {x: 4, y: 4, width: 4, height: 2},
+                        {x: 8, y: 4, width: 2, height: 2},
+                        {x: 10, y: 4, width: 2, height: 2},
+                        {x: 0, y: 6, width: 12, height: 2}
+                    ])">{{ addListWidgetsText }}</a>
+                </div>
+
+                <div class="grid-stack">
+                </div>
+
+                <div>
+                    <a href="#" id="add-widget" class="button" @click="addNewWidget('.gridBox')">{{ addWidgetText }}</a>
+                    <a href="#" id="add-list-widget" class="button"
+                        @click="addListWidget('.gridBox')">{{ addListWidgetsText }}</a>
+                </div>
+
+                <div class="gridBox">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
